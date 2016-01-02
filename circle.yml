@@ -5,3 +5,4 @@ machine:
 test:
   pre:
     - npm i -g protractor
+    - webdriver-manager update
