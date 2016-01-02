@@ -121,7 +121,7 @@ compass.navigate('/')
 
 ### Tables
 
-Compass is also designed to make it simple to write tests that test values in tables:
+Compass is also designed to make it simple to write tests that work with tables:
 
 ```js
 compass.navigate('/')
@@ -131,8 +131,6 @@ compass.navigate('/')
   .hover({'ordersTable(1,4)'}); // Hover over the element in the 1st row, 4th column
   .set({'ordersTable(3,5)': '$9.99'}); // Will set the value of the third row, fifth column to $9.99
 ```
-
-(Not bad for five lines of code...)
 
 ### Waiting for Text
 
@@ -148,7 +146,7 @@ Multiple arguments can also be passed:
 compass.waitFor('You are signed in.', 'Welcome', 'Sign Out'); // Passes if all three are found on the page, otherwise fails
 ```
 
-By default Compass will wait for 3000ms before timing out (and failing the test). This can be adjusted by passing a timeout value as an argument:
+By default, Compass will wait for 3000ms before timing out (and failing the test). This can be adjusted by passing a timeout value as an argument:
 
 ```js
 var compass = require('protractor-compass')({timeout:10000});
@@ -186,7 +184,7 @@ compass.click('Register')
 
 ## Installing
 
-Setup Protractor as per the instructions found on protractortest.org. Then install Compass:
+Setup Protractor as per the instructions found on the [Protractor Home Page](http://protractortest.org). Then install Compass:
 
 ```
 npm i protractor-compass --save-dev
@@ -220,17 +218,17 @@ No, it has been developed independently.
 
 ### Q: Does Compass work with any other framework apart from Angular/Protractor?
 
-At this time, Compass relies on Protractor, and will only test Angular-based pages. Depending on interest, I might look at putting together a version for React/vanilla WebDriverJS.
+At this time, Compass relies on Protractor, and will only test Angular-based pages. Depending on interest, I might look at putting together a version for React and/or a vanilla version built upon WebDriverJS.
 
 ### Q: What is the performance hit of using Compass?
 
 With many helper libraries, there is a performance hit. While care has been taken to minimize, using Compass will certainly be slower than using Protractor directly, or WebDriverJS.
 
-With that said, you may find that the simplicity of writing quick, readable tests will likely outweigh a few extra milliseconds of test time.
+With that said, you may find that the simplicity of writing quick, readable tests might outweigh a few extra milliseconds of test time.
 
 ### Q: How do I do an unsupported action using Compass?
 
-Just use the regular Protractor/WebDriverJS commands instead - or make a pull request for the feature that you are looking for! Compass is just a helper library that sits alongside.
+Compass is just a helper library that sits alongside Protractor. Just use the regular Protractor/WebDriverJS commands you need instead - or make a pull request to add a feature that you are looking for! 
 
 ### Q: Can Compass work with headless environments?
 
@@ -240,21 +238,21 @@ Yes, Compass works well with PhantomJS and has also been tested with CircleCI us
 
 Your selector is picking up multiple elements, and will fail by default (instead of just picking one). For example:
 
-```
+```js
 compass.click('Cancel');
 ```
 
-Multiple elements might be detected, especially if there are multiple cancel buttons on the page. To avoid this, revert back to using the id or name instead:
+Multiple elements might be detected, especially if there are multiple cancel buttons on the page (for example, when both a dialog and the page behind have a Cancel button). To avoid this, revert back to using the id or name instead:
 
-```
+```js
 compass.click('cancelButton');
 ```
 
-### Q: Can I validate the title of the page?
+### Q: Can I validate the title of the page using Compass?
 
 Yes, with the following:
 
-```
+```js
 compass.validate({
   '(title)': 'Welcome to My Web Page'
   });
@@ -264,7 +262,7 @@ compass.validate({
 
 Yes, you can enable logging with this command:
 
-```
+```js
 var compass = require('protractor-compass')({log:true});
 ```
 
@@ -272,7 +270,7 @@ var compass = require('protractor-compass')({log:true});
 
 You can use:
 
-```
+```js
 compass.sleep(1000);
 ```
 
