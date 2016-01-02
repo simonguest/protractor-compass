@@ -1,0 +1,34 @@
+{
+  "name": "protractor-compass",
+  "version": "1.0.0",
+  "description": "An intuitive, action-based, chainable helper library for Protractor",
+  "main": "./lib/index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "start": "node test/server/server.js",
+    "test": "protractor test/conf.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/simonguest/protractor-compass.git"
+  },
+  "keywords": [
+    "protractor",
+    "compass",
+    "webdriver",
+    "angular",
+    "selenium",
+    "testing"
+  ],
+  "author": "Simon Guest",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/simonguest/protractor-compass/issues"
+  },
+  "homepage": "https://github.com/simonguest/protractor-compass#readme",
+  "devDependencies": {
+    "express": "^4.13.3"
+  }
+}
