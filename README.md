@@ -1,5 +1,7 @@
 # protractor-compass
 
+[![Circle CI](https://circleci.com/gh/simonguest/protractor-compass.svg?style=svg)](https://circleci.com/gh/simonguest/protractor-compass)
+
 An intuitive, action-based, chainable helper library for [Protractor](http://protractortest.org).
 
 ## Usage
