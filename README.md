@@ -63,7 +63,7 @@ compass.set({
   }); // Sets the value of a checkbox with text "Residential Address" to true (checked)
 ```
 
-Compass also dereferences labels that have been marked with a "for" attribute. Imagine this username field on a page:
+Compass also dereferences labels that have been marked with a "for" attribute. For example, given this username field on a page:
 
 ```html
 <label for="firstName">First Name</label>
@@ -73,7 +73,7 @@ Compass also dereferences labels that have been marked with a "for" attribute. I
 The input field can now be set as follows:
 
 ```js
-compass.set({'Username': 'Simon'});
+compass.set({'First Name': 'Simon'});
 ```
 
 ### Setting Values
